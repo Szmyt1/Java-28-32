@@ -1,0 +1,31 @@
+<html>
+<head>
+   <title> Mateusz Szmyt 3K </title>
+   <script type="text/javascript">
+      function komputer(producent,datazalozenia,zalozyciele)//początek konstruktora
+      {
+      this.producent=producent;
+      this.datazalozenia=datazalozenia;
+      this.zalozyciele=zalozyciele;
+      }//koniec konstruktora
+
+      komputer.prototype.wypisz = function () //definicja metody
+      {
+      alert(this.producent + ' ' + this.datazalozenia+ ' ' + this.zalozyciele);
+      };
+
+      var komputer1 = new komputer("Intel", "1968", "Gordon E. Moore i Rober Noyce"); // nowy obiekt osoba1
+      var komputer2 = new komputer('AMD', '1969', 'Jerry Sanders');
+      komputer1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+      komputer2.wypisz();
+      document.write("dostęp do właściwości"+"<br>");
+      // poniżej dostęp do pól osoby1
+      document.write("komputer pierwszy"+" &nbsp;producent: "+komputer1.producent+" &nbsp;datazalozenia: "+komputer1.datazalozenia+" &nbsp;zalozyciele: "+komputer1.zalozyciele+"<br>");
+      document.write("komputer drugi"+" &nbsp;producent: "+komputer2.producent+" &nbsp;datazalozenia: "+komputer2.datazalozenia+" &nbsp;zalozyciele: "+komputer2.zalozyciele);
+   </script>
+</head>
+<body>
+   <br>
+   programowanie obiektowe
+</body>
+</html>
